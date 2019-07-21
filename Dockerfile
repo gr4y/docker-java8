@@ -6,7 +6,7 @@ MAINTAINER Sascha Wessel <swessel@gr4yweb.de>
 RUN apt-get -y update && apt-get -y upgrade
 
 # Install OpenJDK 8
-RUN apt-get install -y openjdk-8-jdk
+RUN apt-get install -y openjdk-8-jdk wget curl
 
 # Clean Up
 RUN apt-get clean -y && \

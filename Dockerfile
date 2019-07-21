@@ -5,9 +5,12 @@ MAINTAINER Sascha Wessel <swessel@gr4yweb.de>
 # Update System
 RUN apt-get -y update && apt-get -y upgrade
 
-RUN apt-get install openjdk-8-jdk && \
-    apt-get clean && \
+# Install OpenJDK 8
+RUN apt-get install -y openjdk-8-jdk
+
+# Clean Up
+RUN apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
 	
 # Set JAVA_HOME
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/jre

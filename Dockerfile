@@ -5,9 +5,7 @@ MAINTAINER Sascha Wessel <swessel@gr4yweb.de>
 # Update System
 RUN apt-get -y update && apt-get -y upgrade
 
-RUN apt-add-repository ppa:webupd8team/java && \
-    apt-get update -y && \
-    apt-get install -y oracle-java8-set-default && \
+RUN apt-get install openjdk-8-jdk && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 	

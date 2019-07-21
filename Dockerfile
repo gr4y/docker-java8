@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 MAINTAINER Sascha Wessel <swessel@gr4yweb.de>
 
